@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Deploy surge CI
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -19,8 +19,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it uses
+    
 
     # Install node.js
     - name: Install NodeJS
@@ -43,7 +43,7 @@ jobs:
       
       #Deploy surge
     - name: Deploy React App To Surge
-      run: surge./build project001.surge.sh --token ${{secrets.surge_token }}
+      run: surge./build project001_Faiza.surge.sh --token ${{secrets.surge_token }}
       
      
        
